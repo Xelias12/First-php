@@ -31,7 +31,7 @@ if($notes['Note'][2]>=10){
 }else{
     echo "\nDommage vous n'avez pas la moyenne";
 }
-// Demander à l'utilisateur une valeur
+// Readline permet de demander à l'utilisateur une valeur
 $NoteDemande =(int) readline ("\nEntrez votre note :");
 if($NoteDemande>=10){
     // le triple égale permet de verifier également le type de la variable. Il faut donc convertir la variable
@@ -41,15 +41,72 @@ if($NoteDemande>=10){
     }else{
         echo 'Bien joué';
     }
-    
+
 }else{
     echo 'Dommage';
 }
-*/
-$action = (int) readline ('1 : Attaquer 2 : Défendre 3 : Passer son tour);
+// $$ pour faire un et || pour un ou le !permet de faire l'inverse
+$note1 = 1;
+$note2 = 16;
+if($note1>10 && $note2>=10||$note1>15||$note2>15){
+    echo'Bravo';
+}else{
+    echo'dommage';
+}
+$action = (int) readline ('1 : Attaquer 2 : Défendre 3 : Passer son tour');
+// switch permet de faire des if consecutifs
 switch ($action){
-    case 1: 
-        echo
+    case 1 :
+        echo'Tu attaques';
+        break;
+    case 2 :
+        echo'Tu te defends';
+        break;
+    case 3 :
+        echo'Tu passe ton tour';
+        break;
+    default :
+    echo'Erreur'; 
+}
+$variable=null;
+while($variable!==20){
+    $variable = (int)readline ('Entrez une valeur : ');
+}
+echo'Bravo'
+// ++ pour incrementé de 1 += x pour incrémenté de x
+for($i=0 ;$i!=10;$i++){
+    echo"- $i \n";
+}
+// boucle pour chaque
+$note=[10,15,12,14];
+$élèves = [
+    'cm2' => ['Alexis','Jean'],
+    'cm1' => ['Marc','Yvette'],
+];
+foreach($note as $notes){
+    echo "- $notes \n";
+}
+foreach($élèves as $classe => $élève ){
+    echo "$classe :\n";
+    foreach($élève as $prenom){
+        echo "- $prenom\n";
+    }
+    echo "\n";
+}
+*/
+$notes = [];
+$noterentree = null;
+while($noterentree!='fin'){
+    $noterentree = readline ('Entrez votre note ou tapez fin : - ');
+    $notes[]="$noterentree";
+
+}
+echo "Les notes sont : \n";
+$supp = array_pop($notes);
+
+ foreach($notes as $note){
+    echo "- $note\n";
+}
 
 
 
