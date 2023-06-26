@@ -93,7 +93,7 @@ foreach($élèves as $classe => $élève ){
     }
     echo "\n";
 }
-*/
+
 $notes = [];
 $noterentree = null;
 while($noterentree!='fin'){
@@ -107,7 +107,18 @@ $supp = array_pop($notes);
  foreach($notes as $note){
     echo "- $note\n";
 }
+*/
+// Mettre while(true) d'excécuter la boucle tant qu'on n'utilise pas break pour sortir volontairement de la boucle
+$horaireOuvertureDemande = null;
+$horaireFermeture = null;
+$horaireDemande = null;
+$horaireOuverture = [];
 
+while (true){
+    $horaireOuverture = readline("Entrez l'horraire d'ouverture : \n");
+    $horaireFermeture = readline("Entrez l'horraire de fermeture : \n");
+    
 
+}
 
 ?>
