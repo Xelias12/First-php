@@ -109,49 +109,61 @@ $supp = array_pop($notes);
 }
 */
 // Mettre while(true) d'excécuter la boucle tant qu'on n'utilise pas break pour sortir volontairement de la boucle
-$horaireOuvertureDemande = null;
-$horaireFermeture = null;
-$horaireOuverture = null;
-$tableauHoraireOuverture  = [];
-$finDeDemandeHorraire = null;
-$x = 0;
-$i=0;
+// $horaireOuvertureDemande = null;
+// $horaireFermeture = null;
+// $horaireOuverture = null;
+// $tableauHoraireOuverture  = [];
+// $finDeDemandeHorraire = null;
+// $x = 0;
+// $i=0;
  
 
-while (true){
-    $horaireOuverture = readline("Entrez l'horraire d'ouverture : "); 
-    $horaireFermeture = readline("Entrez l'horraire de fermeture : ");
-    $tableauHoraireOuverture [] =[$horaireOuverture, $horaireFermeture];
+// while (true){
+//     $horaireOuverture = readline("Entrez l'horraire d'ouverture : "); 
+//     $horaireFermeture = readline("Entrez l'horraire de fermeture : ");
+//     $tableauHoraireOuverture [] =[$horaireOuverture, $horaireFermeture];
 
-    $x = $x + 1 ;
-    $finDeDemandeHorraire = readline("Tapez oui si vous voulez continuer ou non si vous avez fini : ");
-    if($finDeDemandeHorraire === "n"){
-        // $horaireOuvertureDemande = readline("Pour quel horraire souhaitez vous savoir si le magasin est ouvert ?");
-        break;
-    }
+//     $x = $x + 1 ;
+//     $finDeDemandeHorraire = readline("Tapez oui si vous voulez continuer ou non si vous avez fini : ");
+//     if($finDeDemandeHorraire === "n"){
+//         // $horaireOuvertureDemande = readline("Pour quel horraire souhaitez vous savoir si le magasin est ouvert ?");
+//         break;
+//     }
 
 
-}
-foreach ($tableauHoraireOuverture as [$a, $b]) {
-    if ($i==0){
-        echo "Le magasin est ouvert de {$a}h à {$b}h";
-        $i=1;
-    }else {
-        echo " et de {$a}h à {$b}h";
-    }
+// }
+// foreach ($tableauHoraireOuverture as [$a, $b]) {
+//     if ($i==0){
+//         echo "Le magasin est ouvert de {$a}h à {$b}h";
+//         $i=1;
+//     }else {
+//         echo " et de {$a}h à {$b}h";
+//     }
     // echo "$a   et  $b";
     // if($a < $horaireOuvertureDemande && $horaireOuvertureDemande < $b){
     //     $i = 1;
     //     break;
     // }
 
-}
+//}
 // if($i==0){
 //     echo "\nLe magasin est fermé ";
 // }else{
 //     echo"\nLe magasin est ouvert";
 // }
 
+
+// $chaineDeCaractere = readline ('Entrez un mot pour savoir si c\'est un palindrome : ');
+// $chaineDeCaractere = strtolower($chaineDeCaractere);
+// $inverseChaineDeCaratere = strrev($chaineDeCaractere);
+// if($chaineDeCaractere==$inverseChaineDeCaratere){
+//     echo ("oui $chaineDeCaractere est un palindrome");
+// }else {
+//     echo("Non $chaineDeCaractere n'est pas un palindrome");
+// }
+$note =[12,15,18,20,20,19,0,0,0];
+$moyenne =round((array_sum($note)/count($note)),2);
+echo "Ta moyenne est de : $moyenne";
 
 
 
